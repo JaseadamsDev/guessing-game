@@ -1,98 +1,118 @@
-'use strict'
+'use strict'; // strict syntax
 
-greetVisitor();
+let correctAnswer = 0;
 
-function greetVisitor() {
-  let name = prompt('What is your name?');
-  if (name === '') {
-    name = prompt('Im not kidding, tell me your name!');
-  }
-  alert('Howdy, ' + name + '!');
-  // console.log('Howdy, ' + name + '!');
-}
+console.log('Web app is running');
 
-ageMe();
-
-
-function ageMe() {
-  let age = prompt('Am I 36 years old?');
-  if (age.toLowerCase() === 'yes' || age.toLowerCase() === 'y' || age.toUpperCase() === 'Y' || age.toUpperCase() === 'YES') {
-    alert('correct');
-    // console.log('correct');
+let playerName = prompt('Hello there, my name is Jason- what is your name?');
+console.log(playerName);
+function one() {
+  if (playerName === null) {
+    alert('Im not kidding, tell me your name!');
+    playerName = prompt('No, seriously, please tell me who you are?');
   } else {
-    alert('WRONG!');
-    // console.log('WRONG!');
+    alert('Ahh okay, hello ' + playerName + '! It is so great to meet you. Welcome to my guessing game!');
   }
 }
+one();
 
-colorMe();
+let manyQuestions = [
+  'I have several questions for you. Please answer with \'Y\' or \'N\'. Firstly, do I enjoy traveling?',
+  'Do I enjoy spending time relaxing on a sandy beach?',
+  'Do you think that I drink too much coffee?',
+  'Am I currently attending CodeFellows?',
+  'Was I living in vietnam before starting CodeFellows?'
+];
 
+let answers = [
+  'y',
+  'y',
+  'n',
+  'y',
+  'y',
+];
 
-function colorMe() {
-  let color = prompt('Do I like the color blue?');
-  if (color.toLowerCase() === 'yes' || color.toLowerCase() === 'y' || color.toUpperCase() === 'Y' || color.toUpperCase() === 'YES') {
-    alert('correct');
-    // console.log('correct');
-  } else {
-    alert('WRONG!');
-    // console.log('WRONG!');
+function allQuestions() {
+  for (let i = 0; i < manyQuestions.length; i++) {
+    let playerResponse = prompt(manyQuestions[i]);
+
+    if (typeof (playerResponse) === 'string') {
+      playerResponse = playerResponse.toLowerCase();
+    }
+    if (playerResponse === answers[i]) {
+      alert('Nice, you are correct!');
+      correctAnswer++;
+      console.log('Correct!');
+    }
+    if (playerResponse !== answers[i]) {
+      alert('Nope, that is incorrect!');
+      console.log('wrong!');
+    }
   }
 }
+allQuestions();
 
-foodMe();
-
-function foodMe() {
-  let food = prompt('Do I like olives?');
-  if (food.toLowerCase() === 'no' || food.toLowerCase() === 'n') {
-    alert('Yup! You are correct.');
-    // console.log('Yup! You are correct.');
-  } else {
-    alert('NOPE! Youre not paying attention...');
-    // console.log('NOPE! Youre not paying attention...')
-    
-  }
-
-
-}
-
-countryMe();
-
-function countryMe() {
-  let country = prompt('Am I from the USA?');
-  if (country.toLowerCase() == "yes" || country.toLowerCase() == "y") {
-    alert('Youre good at this!');
-    // console.log('Youre good at this!');
-  } else {
-    alert('Lame...NO!');
-    // console.log('Lame...NO!');
+function seven() {
+  for (let i = 0; i < 4; i++) {
+    let ageMe = parseInt(prompt('What age do you think I currently am?'));
+    let age = 36;
+    if (ageMe === age) {
+      alert('Oh Wow! That was a really impressive guess! You got it right!');
+      correctAnswer++;
+      break;
+    } else if (i < 36 && ageMe < age) {
+      alert('That is close, but you need to go a bit higher.');
+    } else if (i < 36 && ageMe > age) {
+      alert('RUDE! I\'m not quite there yet, try a little lower.');
+    } else if (i === 3) {
+      alert('Ohh Sorry, but you have no more guesses, but for the record, I am 36 years old.');
+    }
   }
 }
+seven();
 
-stateMe();
+let correct = false;
+let countryList = [
+  'Vietnam',
+  'Thailand',
+  'Laos',
+  'Cambodia',
+  'Malaysia',
+  'Singapore',
+  'South Korea',
+  'Canada',
+];
 
-function stateMe() {
-  let state = prompt('Am I from the WA state?');
-  if (state.toLowerCase() == 'yes' || state.toLowerCase() == 'y') {
-    alert('Youre good at this!');
-    // console.log('Youre good at this!');
-  } else {
-    alert('Lame...NO!');
-    // console.log('Lame...NO!');
+function eight() {
+  for (let i = 0; i < 6; i++) {
+    let playerResponse = prompt('I will give you 7 guesses to try and name one of the countries I have visited ');
+    for (let j = 0; j < countryList.length; j++) {
+      if (playerResponse.toLowerCase() === countryList[j].toLowerCase()) {
+        alert(playerResponse + ' is correct! That was pretty cool that you guessed correctly!');
+        correct = true;
+        correctAnswer++;
+        break;
+      }
+    }
+    if (correct === false) alert('Oh sorry, guess again.');
+    else break;
   }
-}
+  alert('The countries that I have visited are ' + countryList + '.');
+  alert('Thank you for answering my questions ' + playerName + ', you did great! You got ' + correctAnswer + ' questions right! Welcome to my site!');
 
-displayScary();
+}
+eight();
 
 function displayScary() {
 
   let output = '';
   let scary = prompt('scale from 2-5, how scared are you now? *5 being very scared :D *');
-  for (let i = 0; i < scary; i++) {
-    output += "<img class='scary' src='saw.png'/>";
+  for (let a = 0; a < scary; a++) {
+    output += "<img class='scary''/>";
   }
 
   return document.write(output);
+
 }
-
-
+displayScary();
 
