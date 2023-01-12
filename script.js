@@ -134,6 +134,7 @@ while(userNumber !== randomNum){
     break;
   }
 }
+allQuestions();
 
 function randomNumber(){
   let number = Math.floor(Math.random() * 21);
