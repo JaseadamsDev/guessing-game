@@ -81,6 +81,8 @@ function stateMe() {
   }
 }
 
+
+
 displayScary();
 
 function displayScary() {
@@ -89,6 +91,7 @@ function displayScary() {
   let scary = prompt('scale from 2-5, how scared are you now? *5 being very scared :D *');
   for (let i = 0; i < scary; i++) {
     output += "<img class='scary' src='saw.png'/>";
+    console.log(output)
   }
 
   return document.write(output);
