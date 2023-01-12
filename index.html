@@ -1,56 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guessing Game</title>
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guessing Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <!-- here goes metadata -->
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>Class 02 Game</title>
-    <style>
-      header {
-        display: flex;
-        border-radius: 35px;
-        align-items: center;
-        justify-content: center;
-        border-top: 5px;
-        border-bottom: 5;
-        margin-bottom: 10px;
-        font-weight: bold;
-        font-style: italic;
-        font-size: x-large;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      }
+<header style="background-color:rgb(83, 165, 48); color: white;">
+    <h1>WELCOME TO MY GUESSING GAME!</h1>
+</header>
 
-      main {
-        background-color: rgb(36, 188, 148);
-        color: black;
-        padding: 2em;
-        border: 5px;
-      }
-
-      footer {
-        border-radius: 30px;
-        background-color: bisque;
-      }
-      p {
-        font-weight: bold;
-        font-size: large;
-      }
-    </style>
-  </head>
-  <body>
-    <header style="background-color:rgb(83, 165, 48); color: white;">
-      <h1>WELCOME TO MY GUESSING GAME!</h1>
-    </header>
-
-    <main>
+<body id="main">
+  <div>
+    <div class="box1">
       <p>Learn some facts about me.</p>
       <ul>
         <li>My name is Jason</li>
@@ -58,7 +22,9 @@
         <li>I am 36 years old</li>
         <li>I live in WA state</li>
       </ul>
-      <p>Things I like very much</p>
+    </div>
+    <div class="box2">
+    <p>Things I like very much</p>
       <ol>
         <li>Ice cream on a hot day</li>
         <li>Action movies</li>
@@ -66,13 +32,11 @@
         <li>Small monkeys</li>
       </ol>
       <p>Thank you for playing!</p>
-    </main>
-
-    <footer>
-      <p>&copy; Code Fellows 201d96</p>
-    </footer>
-    <script src="script.js">
-
-    </script>
-</body>
+    </div>
+  </div>
+  </body>
+  <script defer src="script.js"></script>
+<footer class="footer">
+  <p>©Code Fellows 201d96  ||  Guessing Game for Class 201  ||  Created by Jason Adams ||</p>
+</footer>
 </html>
