@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../class02/guessing-game/img"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "guessing-game",
+		"liveServer.settings.port": 5501
+	}
+}
