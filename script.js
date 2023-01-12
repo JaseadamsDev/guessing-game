@@ -103,16 +103,53 @@ function eight() {
 }
 eight();
 
+let attempts = 5;
+let userNumber = prompt('Choose a number between 0-20');
+let randomNum = randomNumber();
+console.log(randomNum);
+while(userNumber !== randomNum){
+  for (let i = 4; i > 0; i--) {
+    if(userNumber > randomNum){
+      attempts--;
+      alert(`Your number is too high, try again! Attempts Remaining: ${attempts}`);
+      userNumber = prompt('Choose another number!');
+      // console.log(userNumber);
+      // console.log(randomNum);
+      // console.log(attempts);
+    }
+    else if(userNumber < randomNum){
+      attempts--;
+      alert(`Your number is too low, try again!  Attempts Remaining: ${attempts}`);
+      userNumber = prompt('Choose another number!');
+      // console.log(userNumber);
+      // console.log(randomNum);
+      // console.log(attempts);
+    }
+  }
+  if(userNumber == randomNum){
+    alert('You got the correct guess!');
+    break;
+  } else {
+    alert('You have ran out of guesses!');
+    break;
+  }
+}
+allQuestions();
+
+function randomNumber(){
+  let number = Math.floor(Math.random() * 21);
+  return number;
+}
+
 function displayScary() {
 
   let output = '';
   let scary = prompt('scale from 2-5, how scared are you now? *5 being very scared :D *');
   for (let a = 0; a < scary; a++) {
-    output += "<img class='scary''/>";
+    output += '<img src=\'saw.png\'/>';
   }
 
   return document.write(output);
 
 }
 displayScary();
-

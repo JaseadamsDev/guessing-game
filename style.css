@@ -1,0 +1,36 @@
+header {
+    display: flex;
+    border-radius: 35px;
+    align-items: center;
+    justify-content: center;
+    border-top: 5px;
+    border-bottom: 5;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#main {
+    background-color: rgb(36, 188, 148);
+    color: black;
+    padding: 2em;
+    border: 5px;
+}
+
+footer {
+    border-radius: 30px;
+    background-color: bisque;
+}
+p {
+    font-weight: bold;
+    font-size: large;
+  }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
