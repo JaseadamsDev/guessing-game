@@ -15,10 +15,11 @@
     <title>Class 02 Game</title>
     <style>
       header {
-        display: flex;
+        display: flex; 
         border-radius: 35px;
         align-items: center;
         justify-content: center;
+        /* display: inline-block; */
         border-top: 5px;
         border-bottom: 5;
         margin-bottom: 10px;
@@ -40,9 +41,36 @@
         background-color: bisque;
       }
       p {
-        font-weight: bold;
-        font-size: large;
+        font-family: Georgia, serif;
+font-size: 26px;
+letter-spacing: 1.5px;
+word-spacing: 10px;
+color: #4e1010;
+font-weight: 600;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: capitalize;
       }
+      div {
+        border: 2px solid black;
+        border-color: black;
+        display: flex;
+        border-top-left-radius: 45px;
+        width: 65%;
+        font-size: 24px;
+        letter-spacing: 1.5px;
+        word-spacing: 8px;
+      }
+      .sub {
+        color: rgb(101, 64, 8);
+        font-style: oblique thin;
+        font-weight: 100;
+        font-size: 25px;
+        letter-spacing: 1px;
+        word-spacing: 4px;
+      }
+      
     </style>
   </head>
   <body>
@@ -51,27 +79,40 @@
     </header>
 
     <main>
-      <p>Learn some facts about me.</p>
+            <p>Feel free to learn some cool facts about me.</p>
+          <p class="sub">Facts About me:</p>
+      <div>
       <ul>
-        <li>My name is Jason</li>
-        <li>I am from the USA</li>
-        <li>I am 36 years old</li>
-        <li>I live in WA state</li>
+        <li>My name is Jason L Adams.</li>
+        <li>I am from the United States.</li>
+        <li>I am thirty-six years old.</li>
+        <li>I am from Washington State.</li>
       </ul>
-      <p>Things I like very much</p>
+    </div>
+    <p class="sub">Here are some cool things that I like very much:</p>
+      <div>
       <ol>
-        <li>Ice cream on a hot day</li>
-        <li>Action movies</li>
-        <li>The color blue</li>
-        <li>Small monkeys</li>
+        <li>Ice cream on a hot days is amazing!</li>
+        <li>Action movies are the best genre!</li>
+        <li>The color blue is the best color ever!</li>
+        <li>Small monkeys are the cutest animals in the world!</li>
       </ol>
-      <p>Thank you for playing!</p>
+    </div>
+    <p class="sub">This is some of my more recent work experience:</p>
+      <div>
+      <ul>
+        <li>I have been tutoring English for over 6 years. </li>
+        <li>I worked as a Marketing Specialist & Client Experience.</li>
+        <li>I was a Product Demonstrator in the supplement industry.</li>
+        <li>I was a Regional Account Manager for Muscle Warefare.</li>
+      </ul>
+    </div>
     </main>
 
     <footer>
-      <p>&copy; Code Fellows 201d96</p>
+      <p>|| &copy;Code Fellows || Jason L Adams || Guessing Game Web App || Class 201d96 ||</p>
     </footer>
-    <script src="script.js">
+        <script src="script.js"> 
 
     </script>
 </body>
