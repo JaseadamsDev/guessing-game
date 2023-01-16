@@ -126,12 +126,12 @@ while(userNumber !== randomNum){
       // console.log(attempts);
     }
   }
-  if(userNumber == randomNum){
+  if(userNumber === randomNum){
     alert('You got the correct guess!');
-    break;
+    break ;
   } else {
     alert('You have ran out of guesses!');
-    break;
+    break ;
   }
 }
 allQuestions();
@@ -145,7 +145,7 @@ function displayScary() {
 
   let output = '';
   let scary = prompt('scale from 2-5, how scared are you now? *5 being very scared :D *');
-  for (let a = 0; a < scary; a++) {
+  for (let a = 0; a < scary; a++); {
     output += '<img src=\'saw.png\'/>';
   }
 
@@ -153,3 +153,6 @@ function displayScary() {
 
 }
 displayScary();
+
+
+
